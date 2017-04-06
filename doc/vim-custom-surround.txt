@@ -20,7 +20,7 @@ typing the text.
 USAGE                                               *vim-custom-surround-usage*
 
   Commands                 |vim-custom-surround-commands|
-  Functions                |vim-custom-surround-commands|
+  Functions                |vim-custom-surround-functions|
 
 --------------------------------------------------------------------------------
 Commands~
@@ -57,7 +57,7 @@ customsurround#map({mapping}, {strbefore}, {strafter})
 
         {strbefore} {strafer} String
           The strings to be used as before and after surrounding patterns.
-          It's recommended using single quotes to facilitate tue usage of
+          It's recommended using single quotes to facilitate the usage of
           special characters, like:
 
             call customsurround#map('<Leader>m', '\(', '\)')
@@ -69,7 +69,7 @@ customsurround#map({mapping}, {strbefore}, {strafter})
 CREDITS                                             *vim-custom-surround-credits*
 
 |vim-custom-surround| is developed by Augusto Lopez Dantas
-<aldantas@protonmail.com>, and is distributed under the GNU Public License v3.
+<aldantas@protonmail.com> and is distributed under the GNU Public License v3.
 The project is available at: https://github.com/augustold/vim-custom-surround.
 
 ================================================================================
