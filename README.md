@@ -18,12 +18,18 @@ To use it, just call one of the mode-specific commands:
      call customsurround#map('<Leader>m', '\(', '\)')
 ```
 
+See the doc for more detailed explanations:
+
+```vim
+     :h vim-custom-surround
+```
+
 ## Installation
 
 Use your prefered plugin manager.  For Vundle, add
 
 ```vim
-Plugin 'augustold/vim-custom-surround'
+    Plugin 'augustold/vim-custom-surround'
 ```
 
 to your `.vimrc`.
