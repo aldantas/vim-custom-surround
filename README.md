@@ -10,9 +10,9 @@ To use it, just call one of the mode-specific commands:
     :SurroundSelection <text before> <text after>
  ```
 
- Or, even better, define a normal and visual mappings for the specified surround strings
+ Or, even better, define a normal and visual mapping for the specified surround strings
  using the function `customsurround#map`. For example, to map a LaTeX inline math function
- surrounding:
+ just do:
 
 ```vim
      call customsurround#map('<Leader>m', '\(', '\)')
