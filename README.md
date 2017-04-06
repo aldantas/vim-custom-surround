@@ -11,7 +11,7 @@ To use it, just call one of the mode-specific commands:
  ```
 
  Or, even better, define a normal and visual mappings for the specified surround strings
- using the function `customsurround#map`. For example, to make a LaTeX inline math function
+ using the function `customsurround#map`. For example, to map a LaTeX inline math function
  surrounding:
 
 ```vim
