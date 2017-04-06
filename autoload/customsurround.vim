@@ -22,7 +22,7 @@ function! SurroundWord(before_str, after_str)
     exe 'normal! lbi'.a:before_str
 endfunction
 
-function! customsurround#MapCustomSurround(lhs, before_str, after_str)
+function! customsurround#map(lhs, before_str, after_str)
     exe 'nnoremap <silent> '.a:lhs.' :SurroundWord '.
                 \ a:before_str.' '.a:after_str.'<CR>'
     exe 'vnoremap <silent> '.a:lhs.' :SurroundSelection '.

@@ -9,13 +9,13 @@ To use it, just call one of the mode-specific commands:
     :SurroundWord <text before> <text after>
     :SurroundSelection <text before> <text after>
  ```
- 
+
  Or, even better, define a normal and visual mappings for the specified surround strings
- using the function `MapCustomSurround`. For example, to make a LaTeX inline math function
+ using the function `customsurround#map`. For example, to make a LaTeX inline math function
  surrounding:
- 
+
 ```vim
-     call MapCustomSurround('<Leader>m', '\(', '\)')
+     call customsurround#map('<Leader>m', '\(', '\)')
 ```
 
 ## Installation
