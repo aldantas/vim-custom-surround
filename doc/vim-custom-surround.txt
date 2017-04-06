@@ -65,6 +65,7 @@ customsurround#map({mapping}, {strbefore}, {strafter})
           The above mapping using double quotes should be:
 
             call customsurround#map("<Leader>m", "\\(", "\\)")
+
 ================================================================================
 CREDITS                                             *vim-custom-surround-credits*
 
