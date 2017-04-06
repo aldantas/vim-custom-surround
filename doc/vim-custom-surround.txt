@@ -1,0 +1,76 @@
+*vim-custom-surround.txt*    Define your own surround patterns
+*vim-custom-surround*
+
+================================================================================
+CONTENTS                                         *vim-custom-surround-contents*
+
+  Introduction ...................... |vim-custom-surround-introduction|
+  Usage .................................... |vim-custom-surround-usage|
+  Credits ................................ |vim-custom-surround-credits|
+
+================================================================================
+INTRODUCTION                                 *vim-custom-surround-introduction*
+
+|vim-custom-surround| is a simple plugin that lets you surround the word under
+cursor or the current selection with custom strings. The main goal is to use
+with non trivial but recurrent surrounding patterns and to be apply them after
+typing the text.
+
+================================================================================
+USAGE                                               *vim-custom-surround-usage*
+
+  Commands                 |vim-custom-surround-commands|
+  Functions                |vim-custom-surround-commands|
+
+--------------------------------------------------------------------------------
+Commands~
+                                                 *vim-custom-surround-commands*
+
+                                             *SurroundWord*
+:SurroundWord {before} {after}
+        Apply the surround pattern to the word under cursor. It uses the
+        movement commands 'b' and 'e' to delimitate the word. The pattern is
+        defined in {before} and {after}, and must be the desired characters
+        directly typed, no need for strings.
+
+                                             *SurroundSelection*
+:SurroundSelection {before} {after}
+        Apply the surround pattern to the selected text. It uses the position
+        values of the macros "'<" and "'>" to delimitate the surround
+        positions, so calling it outside visual mode will apply it to the last
+        selected area. Can be used with any of the visual modes.
+
+        See |SurroundWord| for the details of arguments.
+
+--------------------------------------------------------------------------------
+Functions~
+                                                *vim-custom-surround-functions*
+
+                                             *customsurround#map()*
+customsurround#map({mapping}, {strbefore}, {strafter})
+        Create a |nnoremap| for |SurroundWord| and a |vnoremap| for
+        |SurroundSelection| using the keys from {mapping} and passing
+        {strbefore} and {strafter} as parameters for both commands.
+
+        {mapping} String
+          The keys to be used for the mappings.
+
+        {strbefore} {strafer} String
+          The strings to be used as before and after surrounding patterns.
+          It's recommended using single quotes to facilitate tue usage of
+          special characters, like:
+
+            call customsurround#map('<Leader>m', '\(', '\)')
+
+          The above mapping using double quotes should be:
+
+            call customsurround#map("<Leader>m", "\\(", "\\)")
+================================================================================
+CREDITS                                             *vim-custom-surround-credits*
+
+|vim-custom-surround| is developed by Augusto Lopez Dantas
+<aldantas@protonmail.com>, and is distributed under the GNU Public License v3.
+The project is available at: https://github.com/augustold/vim-custom-surround.
+
+================================================================================
+vim:tw=80:ts=8:ft=help:norl:
