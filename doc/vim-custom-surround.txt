@@ -55,7 +55,7 @@ customsurround#map({mapping}, {strbefore}, {strafter})
         {mapping} String
           The keys to be used for the mappings.
 
-        {strbefore} {strafer} String
+        {strbefore} {strafter} String
           The strings to be used as before and after surrounding patterns.
           It's recommended using single quotes to facilitate the usage of
           special characters, like:
