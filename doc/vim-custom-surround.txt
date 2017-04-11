@@ -59,7 +59,7 @@ customsurround#map({mapping}, {strbefore}, [{strafter}])
         {mapping} String
           The keys to be used for the mappings.
 
-        {strbefore} {strafer} String
+        {strbefore} {strafter} String
           The strings to be used as before and after surrounding patterns.
           The parameter {strafter} is optional, if missing, the parameter
           {strbefore} is used in its place. It's recommended using single
