@@ -13,6 +13,8 @@ endfunction
 
 function! SurroundWord(before_str, ...)
     let s:cursorpos = getcurpos()[1:2]
+    let s:formatoptions = &formatoptions
+    set formatoptions=
     if s:cursorpos[1] == 1
         if len(expand('<cword>')) == 1
             let l:insert_after = 'normal! a'
@@ -29,6 +31,14 @@ function! SurroundWord(before_str, ...)
     endtry
     cal cursor(s:cursorpos)
     exe 'normal! lbi'.a:before_str
+    let &formatoptions=s:formatoptions
+    if match(tolower(synIDattr(synID(line('.'),col('.')-1,1),'name')), 'comment') != -1
+        if match(s:formatoptions, 'c') != -1
+            exe 'normal! gqq'
+        endif
+    elseif match(s:formatoptions, 't') != -1
+        exe 'normal! gqq'
+    endif
 endfunction
 
 com! -nargs=+ -range -complete=command SurroundSelection
